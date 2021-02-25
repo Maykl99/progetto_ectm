@@ -12,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styles: [``]
 })
 export class FlatsViewComponent implements OnInit{
-  create: boolean = true;
+  public delete: boolean = false;
   public id: number;
   public flat: Flat;
 
@@ -32,7 +32,7 @@ export class FlatsViewComponent implements OnInit{
 
   deleteFlat(id) {
     this.flatService.deleteFlat(id).subscribe(() => {
-      this.create = !this.create;
+      this.delete = !this.delete;
       setTimeout(() => {
         this.router.navigate(['flats']);
       }, 1000);
