@@ -1,21 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { FlatsComponent } from './flats/flats.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { AuthInterceptorService } from './services/auth-interceptor.service';
-import { LogoutComponent } from './logout/logout.component';
-import { FlatsCreateComponent } from './flats-create/flats-create.component';
-import { FormFlatsComponent } from './form-flats/form-flats.component';
-import { FlatsViewComponent } from './flats-view/flats-view.component';
-import { FlatsEditComponent } from './flats-edit/flats-edit.component';
-import { NavbarComponent } from './navbar/navbar.component';
-/* import { MapComponent } from './map/map.component'; */
+import { FlatsComponent } from './flat/component/flats/flats.component';
+import { LoginComponent } from './user/components/login/login.component';
+import { RegisterComponent } from './user/components/register/register.component';
+import { AuthInterceptorService } from './core/services/auth-interceptor.service';
+import { LogoutComponent } from './user/components/logout/logout.component';
+import { FlatsCreateComponent } from './flat/component/flats-create/flats-create.component';
+import { FlatsViewComponent } from './flat/component/flats-view/flats-view.component';
+import { FlatsEditComponent } from './flat/component/flats-edit/flats-edit.component';
+import { NavbarComponent } from './core/navbar/navbar.component';
+
 
 
 @NgModule({
@@ -26,11 +24,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     RegisterComponent,
     LogoutComponent,
     FlatsCreateComponent,
-    FormFlatsComponent,
     FlatsViewComponent,
     FlatsEditComponent,
     NavbarComponent,
-    //MapComponent
   ],
   imports: [
     BrowserModule,
@@ -48,4 +44,4 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

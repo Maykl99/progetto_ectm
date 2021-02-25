@@ -51,26 +51,7 @@ class FlatController extends Controller
         $flat->image = $request->image;
         $flat->user_id = Auth::id();
 
-
-        //check file
-        /* if ($request->hasFile('image'))
-        {
-            $file      = $request->file('image');
-            $filename  = $file->getClientOriginalName();
-            $extension = $file->getClientOriginalExtension();
-            $picture   = date('His').'-'.$filename;
-            //move image to public/img folder
-            $file->move(public_path('img'), $picture);
-        } */
-
         $flat->save();
-
-        if($flat->save()){
-            if(Auth::user()->status === 0){
-                User::find(Auth::id())->increment('status'); // incrementa il valore status dell'utente loggato
-            }
-        }
-
         return response()->json(['status' => 'Success', 'message' => 'Product Saved']);
     }
 

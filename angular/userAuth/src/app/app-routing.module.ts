@@ -1,13 +1,13 @@
-import { FlatsEditComponent } from './flats-edit/flats-edit.component';
-import { FlatsViewComponent } from './flats-view/flats-view.component';
-import { LogoutComponent } from './logout/logout.component';
-import { LoginComponent } from './login/login.component';
+import { FlatsEditComponent } from './flat/component/flats-edit/flats-edit.component';
+import { FlatsViewComponent } from './flat/component/flats-view/flats-view.component';
+import { LogoutComponent } from './user/components/logout/logout.component';
+import { LoginComponent } from './user/components/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RegisterComponent } from './register/register.component';
-import { FlatsComponent } from './flats/flats.component';
-import { AuthGuard } from './guards/auth.guard';
-import { FlatsCreateComponent } from './flats-create/flats-create.component';
+import { RegisterComponent } from './user/components/register/register.component';
+import { FlatsComponent } from './flat/component/flats/flats.component';
+import { AuthGuard } from './core/guards/auth.guard';
+import { FlatsCreateComponent } from './flat/component/flats-create/flats-create.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
