@@ -32,11 +32,12 @@ export class LoginComponent implements OnInit {
   login()
   {
     this.userService.login(this.credentials.value).subscribe(res => {
-      localStorage.setItem("token", res.token);
 
+      localStorage.setItem("token", res.token);
       if (res) {
         this.router.navigate(['flats']);
       }
+
     })
   }
 
